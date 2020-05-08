@@ -1,4 +1,5 @@
 ﻿using System;
+using SalterNHasher.Services;
 
 namespace SalterNHasher
 {
@@ -7,6 +8,8 @@ namespace SalterNHasher
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            IHasherNSalterServices hasherNSalterServices = new HasherNSalterServices();
+            Console.WriteLine(hasherNSalterServices.GenerateRandomPassword(124));
         }
     }
 }
